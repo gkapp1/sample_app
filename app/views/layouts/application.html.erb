@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title><%= title %></title>
-		<%= csrf_meta_tag %>
-		<%= render 'layouts/stylesheets' %>
-		<%= javascript_include_tag :defaults %>
-	</head>
-	<body>
+  <head>
+    <title><%= yield(:title) %></title>
+    <%= render 'layouts/stylesheets' %>
+    <%= javascript_include_tag :all %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 		<div class = "container">
 			<%= render 'layouts/header' %>
 			<section class="round">
